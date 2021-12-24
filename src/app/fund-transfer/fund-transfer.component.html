@@ -1,0 +1,64 @@
+
+<div >
+    <span >Hi USER,</span> here is your dashboard:
+
+</div>
+
+
+
+
+<!-- <div>
+<nav>
+<a routerLink='/login'routerLinkActiive="active">Login</a>
+<br>
+<a routerLink='/registration'routerLinkActiive="active">Registration</a>
+<br>
+<a routerLink='/deposits'routerLinkActiive="active">Deposit</a>
+<br>
+<a routerLink='/fund-transfer'routerLinkActiive="active">Fund Transfer</a>
+</nav> 
+</div> -->
+
+<!-- <div>
+<app-registration [customers]="cust" (addNewCustomerEmitter)="handleAddNewCustomer($event)"></app-registration>
+</div> -->
+<div>
+<h2>FUND TRANSFER</h2>
+<h3>Enter Your Account Number</h3>
+<input type="number" [(ngModel)]="userno" />
+<h3>Enter the Account Number for Fund Transfer</h3>
+<input type="number" [(ngModel)]="actno" />
+<h3>Enter the Amount for Fund Transfer</h3>
+<input type="number" [(ngModel)]="ammount" />
+
+<h4>Account No:{{actno}} Amount: {{ammount}}</h4>
+<button (click)="doSendFunds()">Send Funds</button>
+</div>
+<div>
+<h2>FUND DEPOSIT</h2>
+<h3>DIRECT DEPOSIT</h3>
+<h4>Enter the Account Number for Deposit</h4>
+<input type="number" [(ngModel)]="duserno" />
+<h4>Enter the Amount for Deposit</h4>
+<input type="number" [(ngModel)]="deposit" />
+<h5>Account No:{{duserno}} Amount: {{deposit}}</h5>
+<button (click)="doSendDeposit()">Send Deposit</button>
+
+</div>
+
+<!-- <h2>RECURRING DEPOSIT</h2>
+<h4>Select When You Want Deposit To Be Sent</h4>
+<select (change)="onChange($event)">
+<option *ngFor="let t of Time" [value]="t">{{t}}</option>
+</select>
+<h4>Enter the Account Number for Deposit</h4>
+<input type="number" [(ngModel)]="ruserno" />
+<h4>Enter the Amount for Deposit</h4>
+<input type="number" [(ngModel)]="rdeposit" />
+<button (click)="doSendRecDeposit()">Send Deposit</button>
+
+<div>
+
+<h1>{{dob | date:"YYYY/MM/dd" | uppercase}}</h1>
+
+</div> -->

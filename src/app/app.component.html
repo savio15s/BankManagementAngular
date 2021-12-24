@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/home">Home</a>
+      <a class="nav-item nav-link" routerLink="/registration">Services</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+     <div  style="padding-left:70%;color: azure;"> Welcome back {{currentUser.firstName | uppercase}}  {{currentUser.lastName | uppercase}}! </div>
+  
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+  
+<!-- <div class="container">
+    <app-registration [customers]="cust" (addNewCustomerEmitter)="handleAddNewCustomer($event)"></app-registration>
+  </div> -->
+
+  <!-- <br>
+  <br>
+  <div class="container">
+    <h2>FUND TRANSFER</h2>
+    <h3>Enter Your Account Number</h3>
+    <input type="number" [(ngModel)]="userno" />
+    <h3>Enter the Account Number for Fund Transfer</h3>
+    <input type="number" [(ngModel)]="actno" />
+    <h3>Enter the Amount for Fund Transfer</h3>
+    <input type="number" [(ngModel)]="ammount" />
+    
+    <h4>Account No:{{actno}} Amount: {{ammount}}</h4>
+    <button (click)="doSendFunds()">Send Funds</button>
+    </div>
+    <br>
+    <div class = "container">
+    <h3>FUND DEPOSIT</h3>
+    <h4>(Direct Deposit)</h4>
+    <h5>Enter the Account Number for Deposit</h5>
+    <input type="number" [(ngModel)]="duserno" />
+    <h5>Enter the Amount for Deposit</h5>
+    <input type="number" [(ngModel)]="deposit" />
+    <h6>Account No:{{duserno}} Amount: {{deposit}}</h6>
+    <button (click)="doSendDeposit()">Send Deposit</button>
+    
+    </div>
+     -->
+
+

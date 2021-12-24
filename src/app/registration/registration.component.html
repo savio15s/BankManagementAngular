@@ -1,0 +1,64 @@
+
+<h4>Existing Customer Details</h4>
+
+<table border = "1">
+    <tr>
+        <td>Account No.</td>
+        <td>Customer Name</td>
+        <td>Account Balance</td>
+    </tr>
+    <tr *ngFor="let customer of cust">
+        <td>{{customer.acno}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.acbal}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<h2>Enter the Details of New Customer</h2>
+<div>
+    <label>Account Number</label>
+    <div>
+        <input type="number" [(ngModel)]="acno"/>
+    </div>
+    <label>Name</label>
+    <div>
+        <input type="text" [(ngModel)]="name"/>
+    </div>
+    <label>Account Balance</label>
+    <div>
+        <input type="number" [(ngModel)]="acbal"/>
+    </div>
+    <button (click)="handleAddNewCustomer()">Add Customer</button>
+    
+</div>
+
+
+<br>
+<br>
+  <div class="container">
+    <h2>FUND TRANSFER</h2>
+    <label>Enter Your Account Number</label>
+    <div><input type="number" [(ngModel)]="userno" /></div>
+    
+    <label>Enter the Account Number for Fund Transfer</label>
+    <div><input type="number" [(ngModel)]="actno" /></div>
+    <label>Enter the Amount for Fund Transfer</label>
+    <div><input type="number" [(ngModel)]="ammount" /></div>
+    
+    <label>Account No:{{actno}} Amount: {{ammount}}</label>
+    <div><button (click)="doSendFunds()">Send Funds</button></div>
+    
+    </div>
+    <br>
+    <div class = "container">
+    <h3>FUND DEPOSIT</h3>
+    <h4>(Direct Deposit)</h4>
+    <label>Enter the Account Number for Deposit</label>
+    <div><input type="number" [(ngModel)]="duserno" /></div>
+    <label>Enter the Amount for Deposit</label>
+    <div><input type="number" [(ngModel)]="deposit" /></div>
+    <label>Account No:{{duserno}} Amount: {{deposit}}</label>
+    <div><button (click)="doSendDeposit()">Send Deposit</button></div>
+    
+    </div>
